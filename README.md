@@ -60,8 +60,17 @@ git push -u origin main
 
 ## 実行方法
 
+### macOS / Linux
+
 ```bash
 source .venv/bin/activate
+python main.py
+```
+
+### Windows（PowerShell）
+
+```powershell
+.\.venv\Scripts\Activate.ps1
 python main.py
 ```
 

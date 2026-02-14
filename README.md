@@ -64,7 +64,9 @@ source .venv/bin/activate
 python main.py
 ```
 
-## 今日の学習ログ
+## 学習ログ
+
+### 2026-02-14
 
 - 空フォルダから Python 学習プロジェクトを開始
 - `python3 -m venv .venv` で仮想環境を作成

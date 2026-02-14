@@ -15,25 +15,13 @@ def to_japanese_era(year: int) -> str:
     for start_year, era_name in eras:
         if year >= start_year:
             era_year = year - start_year + 1
-            return f"{era_name} {era_year}年"
+            return f"{era_name}{era_year}年"
 
     return "対象外"
 
 
 root = tk.Tk()
 root.withdraw()
-
-while True:
-    name = simpledialog.askstring("入力", "あなたの名前は？")
-    if name is None:
-        root.destroy()
-        raise SystemExit
-
-    name = name.strip()
-    if name:
-        break
-
-    messagebox.showerror("エラー", "名前は空で入力できません。")
 
 while True:
     age_text = simpledialog.askstring("入力", "あなたの年齢は？")
@@ -65,13 +53,7 @@ if not passed_birthday:
 
 japanese_era = to_japanese_era(birth_year)
 
-result_text = (
-    f"{name}さんの生まれた年は\n"
-#    "生まれた年：\n"
-    f"  西暦 {birth_year}年\n"
-    f"  和暦 {japanese_era}"
-)
-
+result_text = f"あなたの生まれた年は\n{birth_year}年（{japanese_era}）です"
 messagebox.showinfo("結果", result_text)
 
 root.destroy()
